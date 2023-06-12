@@ -36,10 +36,10 @@ function App() {
   }
 
   const train = async () => {
-    let color = document.querySelector('.colorName').value
+    let color = document.querySelector('.colorName').value.toLowerCase()
+    console.log(color);
     let data = { input: random, output: { [color]: 1 } }
     console.log(data);
-    setColors(current => [...current, data])
     await addDoc(colorsCollectionRef, data)
     console.log(colors);
     getRandomColor();
