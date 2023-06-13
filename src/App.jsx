@@ -36,7 +36,7 @@ function App() {
   }
 
   const train = async () => {
-    let color = document.querySelector('.colorName').value.toLowerCase()
+    let color = document.querySelector('.colorName').value.toLowerCase().trim()
     console.log(color);
     let data = { input: random, output: { [color]: 1 } }
     console.log(data);
